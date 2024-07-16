@@ -59,6 +59,11 @@ body {
   margin-bottom: 24px;
 }
 
+.link {
+  color: var(--title-color);
+  font-weight: bold;
+}
+
 .title {
   font: 700 var(--title-font-size) var(--title-font);
   color: var(--title-color);
@@ -312,19 +317,23 @@ nav.show div.icon-close {
 }
 
 /*====  ABOUT ============================ */
-#about {
+#about,
+#terms {
   background: white;
 }
 
-#about .container {
+#about .container,
+#terms .container {
   margin: 0;
 }
 
-#about .image {
+#about .image,
+#terms .image {
   position: relative;
 }
 
-#about .image::before {
+#about .image::before,
+#terms .image::before {
   content: '';
   height: 100%;
   width: 100%;
@@ -335,16 +344,20 @@ nav.show div.icon-close {
   z-index: 0;
 }
 
-#about .image img {
+#about .image img,
+#terms .image img {
   position: relative;
 }
 
 #about .image img,
-#about .image::before {
+#terms .image img,
+#about .image::before,
+#terms .image::before {
   border-radius: 0.25rem;
 }
 
-#about .text {
+#about .text,
+#terms .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -612,6 +625,12 @@ footer .social a:hover {
 
   /* about */
   #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+  }
+
+  /* terms */
+  #terms .container {
     margin: 0 auto;
     grid-auto-flow: column;
   }
